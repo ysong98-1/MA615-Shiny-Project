@@ -9,11 +9,11 @@ prizes <- read.csv("~/Desktop/MA615/shiny project/shiny/prizes.csv", stringsAsFa
 prizes <- prizes %>%
   mutate(uk_residence_display = ifelse(uk_residence, "Yes", "No"))
 
-# Define UI:
+#Define UI:
 ui <- navbarPage(
   title = "😎UK Literary Prizes Analysis",
   
-# Tab 1: Overview
+#Tab 1: Overview
 tabPanel("🤓Overview",
            fluidRow(
              column(12,
