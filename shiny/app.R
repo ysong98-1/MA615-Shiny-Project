@@ -313,7 +313,7 @@ server <- function(input, output, session) {
     as.character(length(unique(prizes$ethnicity_macro)))
   })
 
-#overview visualizations:  
+#Overview visualizations:  
 output$ethnicity_overview <- renderPlotly({
     eth_counts <- prizes %>%
       count(ethnicity_macro) %>%
