@@ -5,10 +5,7 @@ library(dplyr)
 library(plotly)
 library(DT)
 
-tuesdata <- tidytuesdayR::tt_load('2025-10-28')
-
-prizes <- tuesdata$prizes
-
+prizes <- read.csv("~/Desktop/MA615/shiny project/shiny/prizes.csv", stringsAsFactors = FALSE)
 prizes <- prizes %>%
   mutate(uk_residence_display = ifelse(uk_residence, "Yes", "No"))
 
