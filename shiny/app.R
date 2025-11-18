@@ -285,7 +285,6 @@ tabPanel("🤔Key Insights",
 # Define Server:
 server <- function(input, output, session) {
   
-  # Overview - Statistics
   output$total_prizes_text <- renderText({
     as.character(nrow(prizes))
   })
@@ -313,8 +312,8 @@ server <- function(input, output, session) {
   output$total_ethnicities_text <- renderText({
     as.character(length(unique(prizes$ethnicity_macro)))
   })
-  
-# Overview visualizations
+
+#overview visualizations:  
 output$ethnicity_overview <- renderPlotly({
     eth_counts <- prizes %>%
       count(ethnicity_macro) %>%
